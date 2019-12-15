@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import com.kaider.itoken.common.dto.BaseResult;
 import com.kaider.itoken.service.admin.domain.TbSysUser;
 import com.kaider.itoken.service.admin.service.IAdminService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -66,8 +67,8 @@ public class ServiceAdminController {
                     new BaseResult.Error("userName", "用户名为空"),
                     new BaseResult.Error("password", "密码为空")
             ));
+            baseResult.setErrors(errors);
         }
-        baseResult.setErrors(errors);
         return baseResult;
     }
 

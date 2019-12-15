@@ -16,10 +16,10 @@ public class WebAdminController {
     @Autowired
     private IWebAdminService service;
 
-    @GetMapping(value = {"","login"})
+    @GetMapping(value = {"", "login"})
     public String say(
-    ){
-        String temp =service.login("","");
+    ) {
+        String temp = service.login("", "");
         System.out.println(temp);
         return "index";
     }
