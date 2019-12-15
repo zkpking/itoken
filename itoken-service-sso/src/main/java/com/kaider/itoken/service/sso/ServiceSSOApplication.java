@@ -12,7 +12,7 @@ import tk.mybatis.spring.annotation.MapperScan;
  * @Date：2019/12/15 16:48
  * @描述：
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.kaider.itoken")
 @EnableEurekaClient
 @EnableDiscoveryClient
 @EnableFeignClients

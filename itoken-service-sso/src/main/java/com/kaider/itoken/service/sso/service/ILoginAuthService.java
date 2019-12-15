@@ -7,7 +7,7 @@ import com.kaider.itoken.common.domain.TbSysUser;
  * @Date：2019/12/15 00:46
  * @描述：
  */
-public interface IAdminService {
+public interface ILoginAuthService {
 
     TbSysUser login(String userName, String password);
 

@@ -18,10 +18,7 @@ public class WebAdminController {
 
     @GetMapping(value = {"", "login"})
     public String login() {
-        String temp = adminService.login("", "");
-        System.out.println(temp);
         return "index";
     }
-
 
 }

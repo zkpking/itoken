@@ -10,7 +10,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @Date：2019/12/15 13:10
  * @描述：
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.kaider.itoken")
 @EnableDiscoveryClient
 @EnableFeignClients
 public class WebAdminApplication {

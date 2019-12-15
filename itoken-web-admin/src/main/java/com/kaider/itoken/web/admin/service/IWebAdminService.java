@@ -13,10 +13,4 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "itoken-service-admin", fallback = IWebAdminServiceFallBack.class)
 public interface IWebAdminService {
 
-    @GetMapping("login")
-    String login(
-            @RequestParam("userName") String userName,
-            @RequestParam("password") String password
-    );
-
 }
