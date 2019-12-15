@@ -27,7 +27,6 @@
         <!-- Spring Settings -->
         <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
         <spring-boot-admin.version>2.2.0</spring-boot-admin.version>
-        <zipkin.version>2.10.1</zipkin.version>
         <mysql.version>8.0.18</mysql.version>
         <lombok.version>1.18.10</lombok.version>
         <guava.version>28.1-jre</guava.version>
@@ -112,31 +111,6 @@
                 <version>${spring-boot-admin.version}</version>
             </dependency>
             <!-- Spring Boot Admin End -->
-
-            <!-- ZipKin Begin -->
-            <dependency>
-                <groupId>io.zipkin.java</groupId>
-                <artifactId>zipkin</artifactId>
-                <version>${zipkin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.zipkin.java</groupId>
-                <artifactId>zipkin-server</artifactId>
-                <version>${zipkin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.zipkin.java</groupId>
-                <artifactId>zipkin-autoconfigure-ui</artifactId>
-                <version>${zipkin.version}</version>
-            </dependency>
-            <!-- ZipKin End -->
-
-
-
-
-
-
-
 
         </dependencies>
     </dependencyManagement>

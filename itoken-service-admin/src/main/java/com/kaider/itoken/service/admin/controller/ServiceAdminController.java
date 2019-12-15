@@ -5,7 +5,7 @@ import com.kaider.itoken.common.dto.BaseResult;
 import com.kaider.itoken.service.admin.domain.TbSysUser;
 import com.kaider.itoken.service.admin.service.IAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -30,7 +30,7 @@ public class ServiceAdminController {
      * @param password
      * @return
      */
-    @PostMapping("login")
+    @GetMapping("login")
     public BaseResult login(
             String userName,
             String password
