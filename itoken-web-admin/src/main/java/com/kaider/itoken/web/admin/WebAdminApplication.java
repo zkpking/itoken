@@ -20,9 +20,6 @@ public class WebAdminApplication {
         SpringApplication.run(WebAdminApplication.class, args);
     }
 
-    @GetMapping("hi")
-    public String say(){
-        return "index";
-    }
+
 
 }
