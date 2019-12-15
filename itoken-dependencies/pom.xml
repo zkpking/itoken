@@ -87,6 +87,13 @@
                 <type>bundle</type>
             </dependency>
 
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-bom.version}</version>
+                <type>bundle</type>
+            </dependency>
+
             <!-- 运行环境 end -->
 
             <!-- Spring Cloud Begin -->

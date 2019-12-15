@@ -14,12 +14,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class WebAdminController {
 
     @Autowired
-    private IWebAdminService service;
+    private IWebAdminService adminService;
 
     @GetMapping(value = {"", "login"})
-    public String say(
-    ) {
-        String temp = service.login("", "");
+    public String login() {
+        String temp = adminService.login("", "");
         System.out.println(temp);
         return "index";
     }

@@ -1,9 +1,9 @@
 package com.kaider.itoken.web.admin.service;
 
 import com.kaider.itoken.web.admin.service.fallback.IWebAdminServiceFallBack;
-import feign.Param;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @Author： kaider
@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface IWebAdminService {
 
     @GetMapping("login")
-    String login(@Param("userName") String userName, @Param("userName") String password);
+    String login(
+            @RequestParam("userName") String userName,
+            @RequestParam("password") String password
+    );
 
 }
