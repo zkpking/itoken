@@ -1,0 +1,11 @@
+spring:
+  redis:
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+    sentinel:
+      master: mymaster
+      nodes: localhost:26379, localhost:26380, localhost:26381

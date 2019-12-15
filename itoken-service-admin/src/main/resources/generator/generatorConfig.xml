@@ -25,7 +25,7 @@
         </jdbcConnection>
 
         <!-- 配置实体类存放路径 -->
-        <javaModelGenerator targetPackage="com.kaider.itoken.service.admin.domain" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.kaider.itoken.service.admin.com.kaider.itoken.common.domain" targetProject="src/main/java"/>
 
         <!-- 配置 XML 存放路径 -->
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>

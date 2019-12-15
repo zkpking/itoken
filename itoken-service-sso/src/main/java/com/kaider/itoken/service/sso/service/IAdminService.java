@@ -1,4 +1,4 @@
-package com.kaider.itoken.service.admin.service;
+package com.kaider.itoken.service.sso.service;
 
 import com.kaider.itoken.common.domain.TbSysUser;
 
@@ -9,8 +9,6 @@ import com.kaider.itoken.common.domain.TbSysUser;
  */
 public interface IAdminService {
 
-    void register(TbSysUser info);
-
-    TbSysUser login(String userName,String password);
+    TbSysUser login(String userName, String password);
 
 }
