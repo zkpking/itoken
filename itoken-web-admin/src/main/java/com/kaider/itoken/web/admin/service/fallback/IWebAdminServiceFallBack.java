@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @Date：2019/12/15 13:49
  * @描述：
  */
-@Component("")
+@Component
 public class IWebAdminServiceFallBack implements IWebAdminService {
 
     @Override
