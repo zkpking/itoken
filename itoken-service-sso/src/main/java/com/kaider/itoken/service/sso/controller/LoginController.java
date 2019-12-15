@@ -33,6 +33,14 @@ public class LoginController {
     @Autowired
     private IRedisService redisService;
 
+    /**
+     * 登录
+     *
+     * @param url
+     * @param request
+     * @param model
+     * @return
+     */
     @GetMapping("login")
     public String login(
             @RequestParam(required = false) String url,
@@ -60,13 +68,24 @@ public class LoginController {
             }
         }
 
-        if(isNotBlank(url)){
+        if (isNotBlank(url)) {
             model.addAttribute("url", url);
         }
 
         return "login";
     }
 
+    /**
+     * 登录
+     *
+     * @param url
+     * @param userName
+     * @param password
+     * @param request
+     * @param response
+     * @param attributes
+     * @return
+     */
     @PostMapping("login")
     public String login(
             @RequestParam(required = false) String url,
@@ -96,5 +115,28 @@ public class LoginController {
         return "redirect:/login";
     }
 
+    /**
+     * 注销
+     *
+     * @param request
+     * @param response
+     * @param model
+     * @return
+     */
+    @GetMapping("loginOut")
+    public String loginOut(
+            @RequestParam(required = false) String url,
+            HttpServletRequest request,
+            HttpServletResponse response,
+            Model model
+    ) {
+
+        try {
+            CookieUtils.deleteCookie(request, response, "token");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return login(url, request, model);
+    }
 
 }
