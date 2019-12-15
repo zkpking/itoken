@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: itoken-web-admin
+      uri: http://localhost:8888
+      label: master
+      profile: dev

@@ -6,6 +6,7 @@ import com.kaider.itoken.service.admin.service.IAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
 
 /**
  * @Author： kaider
@@ -23,11 +24,12 @@ public class AdminServiceImpl implements IAdminService {
     @Override
     @Transactional(readOnly = false)
     public void register(TbSysUser info) {
-
+        mapper.insert(info);
     }
 
     @Override
     public TbSysUser login(String userName, String password) {
-        return null;
+        Example example = new Example(TbSysUser.class);
+        return mapper.selectOneByExample(example);
     }
 }

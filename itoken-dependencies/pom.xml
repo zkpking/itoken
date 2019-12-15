@@ -29,6 +29,9 @@
         <spring-boot-admin.version>2.2.0</spring-boot-admin.version>
         <zipkin.version>2.10.1</zipkin.version>
         <mysql.version>8.0.18</mysql.version>
+        <lombok.version>1.18.10</lombok.version>
+        <guava.version>28.1-jre</guava.version>
+        <nekohtml.version>1.9.22</nekohtml.version>
         <!-- Spring Boot Starter Begin -->
         <druid-spring-boot-starter.version>1.1.21</druid-spring-boot-starter.version>
         <mapper-spring-boot-starter.version>2.1.5</mapper-spring-boot-starter.version>
@@ -56,20 +59,33 @@
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
                 <version>${pagehelper-spring-boot-starter.version}</version>
             </dependency>
+            <dependency>
+                <groupId>net.sourceforge.nekohtml</groupId>
+                <artifactId>nekohtml</artifactId>
+                <version>${nekohtml.version}</version>
+            </dependency>
+
             <!-- Spring Boot Starter End -->
 
             <!-- 运行环境 begin-->
-           <!-- <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <scope>runtime</scope>
-            </dependency>-->
-
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <scope>runtime</scope>
                 <version>${mysql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+                <type>bundle</type>
             </dependency>
 
             <!-- 运行环境 end -->
