@@ -63,6 +63,9 @@ public class BaseResult implements Serializable {
         return baseResult;
     }
 
+    /**
+     * 分页数据
+     */
     @Data
     public static class Cursor {
         private int total;
@@ -70,6 +73,9 @@ public class BaseResult implements Serializable {
         private int limit;
     }
 
+    /**
+     * 错误信息
+     */
     @Data
     @AllArgsConstructor //构造函数
     public static class Error {
