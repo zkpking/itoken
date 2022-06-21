@@ -27,7 +27,7 @@
         <!-- Spring Settings -->
         <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
         <spring-boot-admin.version>2.2.0</spring-boot-admin.version>
-        <mysql.version>8.0.18</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <lombok.version>1.18.10</lombok.version>
         <guava.version>28.1-jre</guava.version>
         <nekohtml.version>1.9.22</nekohtml.version>
